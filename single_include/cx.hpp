@@ -5,16 +5,16 @@
 // (See accompanying file LICENSE_1_0.txt or copy at
 // http://www.boost.org/LICENSE_1_0.txt)
 #ifndef CX_HPP
-#define CX_HPP 
+#define CX_HPP
 #define CX_VERSION_MAJOR 1
 #define CX_VERSION_MINOR 3
 #define CX_VERSION_PATCH 1
 #ifndef CX_ALGORITHM_HPP
-#define CX_ALGORITHM_HPP 
+#define CX_ALGORITHM_HPP
 #ifndef CONFIG_HPP
-#define CONFIG_HPP 
+#define CONFIG_HPP
 #ifndef QUICKCPPLIB_HAS_FEATURE_H
-#define QUICKCPPLIB_HAS_FEATURE_H 
+#define QUICKCPPLIB_HAS_FEATURE_H
 #if __cplusplus >= 201103L
 #if !defined(__cpp_alias_templates)
 #define __cpp_alias_templates 190000
@@ -333,12 +333,9 @@
 #define cfg_HAS_CONSTEXPR14 (__cpp_constexpr >= 201304)
 #if cfg_HAS_CONSTEXPR14
 #define cfg_constexpr14 constexpr
-#else
-#define cfg_constexpr14 
-#endif
-#if cfg_HAS_CONSTEXPR14 && defined(__clang__)
 #define cfg_HAS_FULL_FEATURED_CONSTEXPR14 1
 #else
+#define cfg_constexpr14
 #define cfg_HAS_FULL_FEATURED_CONSTEXPR14 0
 #endif
 #endif
@@ -362,7 +359,7 @@ return first1 != last1 && first2 != last2 && *first1 == *first2
 }
 #endif
 #ifndef CX_ARRAY_HPP
-#define CX_ARRAY_HPP 
+#define CX_ARRAY_HPP
 #include <cstddef>
 #include <stdexcept>
 namespace cx
@@ -464,7 +461,7 @@ return a[Index];
 }
 #endif
 #ifndef CX_FUNCTIONAL_HPP
-#define CX_FUNCTIONAL_HPP 
+#define CX_FUNCTIONAL_HPP
 #include <utility>
 namespace cx
 {
@@ -507,7 +504,7 @@ return std::forward<T>(lhs) == std::forward<U>(rhs);
 }
 #endif
 #ifndef CX_ITERATOR_HPP
-#define CX_ITERATOR_HPP 
+#define CX_ITERATOR_HPP
 #include <cstddef>
 #include <initializer_list>
 namespace cx
@@ -600,7 +597,7 @@ return cx::end(c);
 }
 #endif
 #ifndef CX_STRING_VIEW_HPP
-#define CX_STRING_VIEW_HPP 
+#define CX_STRING_VIEW_HPP
 #include <cstddef>
 #include <ostream>
 namespace cx
@@ -702,7 +699,7 @@ return {str, s};
 }
 #endif
 #ifndef CX_TUPLE_HPP
-#define CX_TUPLE_HPP 
+#define CX_TUPLE_HPP
 #include <cstddef>
 #include <type_traits>
 #include <utility>
@@ -827,7 +824,7 @@ return !(lhs == rhs);
 }
 #endif
 #ifndef CX_UTILITY_HPP
-#define CX_UTILITY_HPP 
+#define CX_UTILITY_HPP
 #include <cstddef>
 #include <type_traits>
 #include <utility>

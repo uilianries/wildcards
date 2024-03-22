@@ -12,13 +12,9 @@
 
 #if cfg_HAS_CONSTEXPR14
 #define cfg_constexpr14 constexpr
-#else
-#define cfg_constexpr14
-#endif
-
-#if cfg_HAS_CONSTEXPR14 && defined(__clang__)
 #define cfg_HAS_FULL_FEATURED_CONSTEXPR14 1
 #else
+#define cfg_constexpr14
 #define cfg_HAS_FULL_FEATURED_CONSTEXPR14 0
 #endif
 
